@@ -19,6 +19,6 @@ Route::get('/reunions', 'ReunionsController@index')->name('reunions');
 Route::get('/projets', 'ProjetsController@index')->name('projets');
 Route::get('/compatabilite', 'ComptabiliteController@index')->name('comptabilite');
 Route::get('/siteweb', 'SitewebController@index')->name('siteweb');
-Route::get('/administrateurs', 'AdministrateursController@index')->name('administrateurs');
+Route::get('/administration', 'AdministrationController@show')->name('administration');
 Route::get('/suggestions', 'SuggestionsController@index')->name('suggestions');
 

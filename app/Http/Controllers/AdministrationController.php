@@ -7,13 +7,13 @@ use App\Models\User;
 
 
 
-class AdministrateursController extends Controller
+class AdministrationController extends Controller
 {
 	
-    public function index()
+    public function show()
 	{
 		$users = User::all();
 		// compact() permet de créer un tableau automatiquement en prenant les noms des variables donné en paramètre.	
-		return view('administrateurs.index', compact('users'));
+		return view('administration.show', compact('users'));
 	}
 }

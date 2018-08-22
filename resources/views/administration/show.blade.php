@@ -5,14 +5,14 @@
 @endsection
 
 <!-- variable pour activation des rubriques du menu -->
-@php ($niv1 = "administrateurs")
+@php ($niv1 = "administration")
 @php ($niv2 = "")
 
 <!-- variables breadcrumb -->
-@php ($titre = "Administrateurs")
-@php ($bread1 = "Administrateurs")
+@php ($titre = "Administration")
+@php ($bread1 = "Administration")
 @php ($bread2 = "")
-@php ($icon = "far fa-star")
+@php ($icon = "fas fa-cog")
 
 <!-- ajout du contenu -->
 @section('content')

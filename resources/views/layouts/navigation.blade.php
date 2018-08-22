@@ -51,7 +51,7 @@
             </li>
 
             @if ($niv1 == "administrateurs") <li class="active"> @else <li>  @endif 
-                <a href="{{ route('administrateurs') }}"><i class="far fa-star"></i> <span class="nav-label">Administrateurs</span><span class="label label-warning float-right">2</span></a>
+                <a href="{{ route('administration') }}"><i class="fas fa-cog"></i> <span class="nav-label">Administration</span><span class="label label-warning float-right">2</span></a>
 
              @if ($niv1 == "suggestions") <li class="active"> @else <li>  @endif 
             <li>
