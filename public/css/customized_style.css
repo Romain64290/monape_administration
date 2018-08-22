@@ -82,10 +82,14 @@ padding: 0px 0px !important;}
 
 /** TOP NAVIGATION **/
 
+.navbar-static-top .dropdown-menu {
+right: -150px;}
+
 .bell-pos{
-position: absolute;
-display: inline-block;
-top: 0px; right: 0px;
+position: absolute !important;
+display: inl    ine-block;
+top: 0px; right: 155px;
+margin-right: 10px !important;
 }
 
 .navbar-form-custom {
