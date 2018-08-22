@@ -54,7 +54,7 @@
                 <a href="{{ route('administrateurs') }}"><i class="far fa-star"></i> <span class="nav-label">Administrateurs</span><span class="label label-warning float-right">2</span></a>
 
              @if ($niv1 == "suggestions") <li class="active"> @else <li>  @endif 
-            <li class="landing_link">
+            <li>
                 <a href="{{ route('suggestions') }}"><i class="fas fa-comment-dots"></i> <span class="nav-label">Vos suggestions</span> </a>
             </li>
         </ul>
