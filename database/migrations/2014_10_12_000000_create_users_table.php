@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('role')->default('1')->comment('1 => User, 2 => Admin, 3 => Super-Admin');
             $table->boolean('state')->default('0');// utilsateur validé ou non
             $table->string('team_id')->default('0');// clé étrangere
-            $table->foreign('team_id')->references('id')->on('team')->onDelete('cascade');// verifier pertinence cascade ?
+            $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');// verifier pertinence cascade ?
             $table->rememberToken();
             $table->timestamps();
         });

@@ -18,7 +18,8 @@ class CreateTeamsTables extends Migration
             $dateMore1year=date("Y-m-d", strtotime("+1 year"));// Date + 1 an
 
             $table->increments('id');
-            $table->integer('idBoss');
+            $table->integer('idboss');
+            $table->foreign('idboss')->references('id')->on('users')->onDelete('restrict');
             $table->string('name');
             $table->string('school');            
             $table->string('address');
@@ -32,7 +33,7 @@ class CreateTeamsTables extends Migration
 
              // Insertion utisateurs initiaux
              DB::table('teams')->insert(
-                ['idBoss' => '1','name' => 'Ape de Bosdarros','school' => 'Bosdarros', 'address' => 'place de la mairie', 'cp' => '64290', 'city' => 'BOSDARROS', 'uniqId' => 'djfmlksdhj','subscription' => '3','endofsubscription' => '2100-12-31'] ); 
+                ['idboss' => '1','name' => 'Ape de Bosdarros','school' => 'Bosdarros', 'address' => 'place de la mairie', 'cp' => '64290', 'city' => 'BOSDARROS', 'uniqId' => 'djfmlksdhj','subscription' => '3','endofsubscription' => '2100-12-31'] ); 
     }
 
     /**
