@@ -35,7 +35,53 @@
                     </div>
                 </div>
                 <div class="ibox-content">
-                   
+                  
+                               
+                        
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Email</th>
+                                        <th>Zone(s) autorisée(s)</th>
+                                        <th>Modif. état</th>
+                                        <th>Statut</th>
+                                     
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($users as $user)
+                                        <tr>
+                                            <td>{!! $user->id !!}</td>
+                                            <td class="text-primary"><strong>{!! $user->lastName !!}</strong></td>
+                                            <td class="text-primary"><strong>{!! $user->firstName !!}</strong></td>
+                                            <td class="text-primary"><strong>{!! $user->email !!}</strong></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            
+                                          
+
+
+                                        </tr>
+                                    @endforeach
+                                  </tbody>
+                            </table>
+                        
+                     
+                    </div>
+
+
+
+
+
+
+
+
+
+
                 </div>
             </div>
         </div>
