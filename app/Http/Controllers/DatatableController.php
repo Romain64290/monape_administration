@@ -22,19 +22,18 @@ class DatatableController extends Controller
 
         return Datatables::of($users)
             ->addColumn('action', function ($user) {
-                return '<a href="#edit-'.$user->id.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+                return '<a href="#edit-'.$user->id.'" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-edit"></i> Accepter </a>&nbsp;&nbsp;&nbsp;<a href="#edit-'.$user->id.'" class="btn btn-xs btn-warning"><i class="glyphicon glyphicon-edit"></i> Supprimer </a>';
             })
-            ->addColumn('delete', function ($user) {
-                return '<a href="/products/show/1">delete</a>';
+            ->addColumn('statut', function ($user) {
+                return 'En attente';
             })
             ->addColumn('zone', function ($user) {
-                return '<input type="checkbox" onclick="location.href=\'change_zone.php?zone=1&id_membre=5&etat=off\';" checked > Estival  &nbsp; &nbsp; &nbsp;&nbsp; 
-                <input type="checkbox" onclick="location.href=\'change_zone.php?zone=2&id_membre=5&etat=off\';" checked> Reste de l\'annéé &nbsp; &nbsp; &nbsp;&nbsp;
-                <input type="checkbox"  onclick="location.href=\'change_zone.php?zone=3&id_membre=5&etat=off\';" checked > Entreprise ';
+                return '<input type="checkbox" onclick="location.href=\'change_zone.php?zone=1&id_membre=5&etat=off\';" checked > Site web &nbsp; &nbsp; &nbsp;&nbsp; 
+                <input type="checkbox" onclick="location.href=\'change_zone.php?zone=2&id_membre=5&etat=off\';" checked> Comptabilité';
             })
             
             //permet d'afficher un contenu HTML
-            ->rawColumns(['delete','action','zone'])
+            ->rawColumns(['statut','action','zone'])
 
             ->make(true);
     }

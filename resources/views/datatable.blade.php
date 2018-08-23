@@ -2,7 +2,7 @@
 
 <!-- ajout de css -->
 @section('css')
-<link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="template/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
 @endsection
 
 <!-- variable pour activation des rubriques du menu -->
@@ -36,11 +36,10 @@
                     </div>
                 </div>
                 <div class="ibox-content">
-                  
-                               
+
                              <div class="table-responsive">
 
-                                   <table class="table table-hover table-bordered table-striped datatable" style="width:100%">
+                                   <table class="table table-striped table-bordered table-hover datatable" style="width:100%">
                                             <thead>
                                                 <tr>
                                                     <th>Nom</th>
@@ -76,7 +75,12 @@
 
 <!-- ajout de js -->
 @section('js')
-<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+    <script src="template/js/plugins/dataTables/datatables.min.js"></script>
+    <script src="template/js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
+
+
+
 <script type="text/javascript">
 $(document).ready(function() {
     $('.datatable').DataTable({
@@ -93,9 +97,10 @@ $(document).ready(function() {
             {data: 'lastName', name: 'lastName'},
             {data: 'firstName', name: 'firstName'},           
             {data: 'email', name: 'email'},
-            {data: 'action', name: 'action', orderable: false, searchable: false,className: 'dt-body-center'},
-            {data: 'delete', name: 'delete', orderable: false, searchable: false, width: "15%"},
             {data: 'zone', name: 'zone', orderable: false, searchable: false},
+            {data: 'statut', name: 'statut', orderable: false, searchable: false, width: "15%"},
+            {data: 'action', name: 'action', orderable: false, searchable: false,className: 'dt-body-center'},
+            
         ]
     });
 });
