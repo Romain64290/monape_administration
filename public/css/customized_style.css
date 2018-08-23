@@ -169,6 +169,11 @@ margin-right: 10px !important;
 .pull-right {
     float: right !important;}
 
+/*** Datatable ***/
+    .table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+        background-color: #FFF;
+        }
+
     
 
 

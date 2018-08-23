@@ -18,7 +18,13 @@ class DatatableController extends Controller
 
     public function getPosts()
     {
-        $users = User::select(['id', 'lastName', 'email', 'firstName']);
+        $users = User::all();
+
+        
+       /* $users = User::where('active', 1)
+               ->orderBy('name', 'desc')
+               ->take(10)
+               ->get();*/
 
         return Datatables::of($users)
             ->addColumn('action', function ($user) {

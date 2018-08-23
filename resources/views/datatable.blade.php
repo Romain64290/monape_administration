@@ -87,7 +87,7 @@ $(document).ready(function() {
         processing: true,
         serverSide: true,
         stateSave: true,
-        responsive: true,
+        responsive: true,                      
         "language": {
             "url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
         },   
