@@ -38,21 +38,24 @@
                 <div class="ibox-content">
                   
                                
-                        
-                
-                                        <table class="table table-hover table-bordered table-striped datatable" style="width:100%">
+                             <div class="table-responsive">
+
+                                   <table class="table table-hover table-bordered table-striped datatable" style="width:100%">
                                             <thead>
                                                 <tr>
-                                                    <th>firstName</th>
-                                                    <th>lastName</th>
+                                                    <th>Nom</th>
+                                                    <th>Prenom</th>
                                                     <th>Email</th>
+                                                    <th>Zone(s) autorisée(s)</th>
+                                                    <th>Modif. état</th>
+                                                    <th>Statut</th>
                                                 </tr>
                                             </thead>
                                         </table>
                                  
                         
                      
-                    </div>
+                    </div></div>
 
 
 
@@ -87,9 +90,12 @@ $(document).ready(function() {
 
         ajax: '{{ route('datatable/getdata') }}',
         columns: [
-            {data: 'firstName', name: 'firstName'},
             {data: 'lastName', name: 'lastName'},
+            {data: 'firstName', name: 'firstName'},           
             {data: 'email', name: 'email'},
+            {data: 'action', name: 'action', orderable: false, searchable: false,className: 'dt-body-center'},
+            {data: 'delete', name: 'delete', orderable: false, searchable: false, width: "15%"},
+            {data: 'zone', name: 'zone', orderable: false, searchable: false},
         ]
     });
 });
