@@ -22,3 +22,8 @@ Route::get('/siteweb', 'SitewebController@index')->name('siteweb');
 Route::get('/administration', 'AdministrationController@show')->name('administration');
 Route::get('/suggestions', 'SuggestionsController@index')->name('suggestions');
 
+// Display view
+Route::get('/datatable', 'DataTableController@datatable');
+// Get Data
+Route::get('/datatable/getdata', 'DataTableController@getPosts')->name('datatable/getdata');
+
