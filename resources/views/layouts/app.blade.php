@@ -12,9 +12,10 @@
     <link href="template/font-awesome/css/all.css" rel="stylesheet">
     <link href="template/css/animate.css" rel="stylesheet">
     <link href="template/css/style.css" rel="stylesheet">
-    <link href="css/customized_style.css" rel="stylesheet">
-    
+       
     @yield('css')
+
+    <link href="css/customized_style.css" rel="stylesheet">
 
 </head>
 

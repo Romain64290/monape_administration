@@ -21,12 +21,8 @@
         <div class="col-lg-12">
             <div class="text-center m-t-lg">
                 <h1>
-                    INSPINIA Seed Project  BS4
+                   A venir prochainement...
                 </h1>
-                <small>
-                    It is an application skeleton  a typical web app. You can  it to quickly bootstrap your webapp projects and dev environment these projects.
-                </small>
-                <p>mon texte2</p>
             </div>
         </div>
     </div>

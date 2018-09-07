@@ -19,11 +19,11 @@ Route::get('/reunions', 'ReunionsController@index')->name('reunions');
 Route::get('/projets', 'ProjetsController@index')->name('projets');
 Route::get('/compatabilite', 'ComptabiliteController@index')->name('comptabilite');
 Route::get('/siteweb', 'SitewebController@index')->name('siteweb');
-Route::get('/administration', 'AdministrationController@show')->name('administration');
 Route::get('/suggestions', 'SuggestionsController@index')->name('suggestions');
+Route::get('/profil', 'ProfilController@index')->name('profil');
 
 // Display view
-Route::get('/datatable', 'DataTableController@datatable');
+Route::get('/utilisateurs', 'UtilisateursController@datatable')->name('utilisateurs');
 // Get Data
-Route::get('/datatable/getdata', 'DataTableController@getPosts')->name('datatable/getdata');
+Route::get('/utilisateurs/getdata', 'UtilisateursController@getPosts')->name('utilisateurs/getdata');
 

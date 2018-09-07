@@ -50,8 +50,8 @@
                 <a href="{{ route('siteweb') }}"><i class="fa fa-desktop"></i> <span class="nav-label">Site web</span> </a>
             </li>
 
-            @if ($niv1 == "administrateurs") <li class="active"> @else <li>  @endif 
-                <a href="{{ route('administration') }}"><i class="fas fa-cog"></i> <span class="nav-label">Administration</span><span class="label label-warning float-right">2</span></a>
+            @if ($niv1 == "administration") <li class="active"> @else <li>  @endif 
+                <a href="{{ route('utilisateurs') }}"><i class="fas fa-cog"></i> <span class="nav-label">Administration</span><span class="label label-warning float-right">2</span></a>
 
              @if ($niv1 == "suggestions") <li class="active"> @else <li>  @endif 
             <li>

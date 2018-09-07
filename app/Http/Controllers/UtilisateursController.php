@@ -9,11 +9,11 @@ use Redirect;
 use DataTables;
 use App\Models\User;
 
-class DatatableController extends Controller
+class UtilisateursController extends Controller
 {
     public function datatable()
     {
-        return view('datatable');
+        return view('administration.utilisateurs');
     }
 
     public function getPosts()
@@ -28,7 +28,7 @@ class DatatableController extends Controller
 
         return Datatables::of($users)
             ->addColumn('action', function ($user) {
-                return '<a href="#edit-'.$user->id.'" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-edit"></i> Accepter </a>&nbsp;&nbsp;&nbsp;<a href="#edit-'.$user->id.'" class="btn btn-xs btn-warning"><i class="glyphicon glyphicon-edit"></i> Supprimer </a>';
+                return '<a href="#edit-'.$user->id.'" title="Accepter" class="btn btn-xs btn-primary"><i class="fas fa-check"></i></a>&nbsp;&nbsp;&nbsp;<a href="#edit-'.$user->id.'" title="Supprimer" class="btn btn-xs btn-danger"><i class="far fa-trash-alt"></i></a>';
             })
             ->addColumn('statut', function ($user) {
                 return 'En attente';

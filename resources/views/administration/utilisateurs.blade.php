@@ -12,7 +12,7 @@
 <!-- variables breadcrumb -->
 @php ($titre = "Administration")
 @php ($bread1 = "Administration")
-@php ($bread2 = "")
+@php ($bread2 = "Utilisateurs")
 @php ($icon = "fas fa-cog")
 
 <!-- ajout du contenu -->
@@ -39,37 +39,25 @@
 
                              <div class="table-responsive">
 
-                                   <table class="table table-striped table-bordered table-hover datatable" style="width:100%">
-                                            <thead>
+                                   <table class="table table-striped table-bordered datatable" style="width:100%">
+                                           <thead>
                                                 <tr>
                                                     <th>Nom</th>
                                                     <th>Prenom</th>
                                                     <th>Email</th>
                                                     <th>Zone(s) autorisée(s)</th>
-                                                    <th>Modif. état</th>
                                                     <th>Statut</th>
-                                                </tr>
-                                            </thead>
+                                                    <th>Modif. état</th>
+                                                 </tr>
+                                            </thead> 
                                         </table>
-                                 
-                        
-                     
+                                                     
                     </div></div>
-
-
-
-
-
-
-
-
-
 
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 @endsection
 
@@ -87,19 +75,25 @@ $(document).ready(function() {
         processing: true,
         serverSide: true,
         stateSave: true,
-        responsive: true,                      
+        responsive: true, 
+        searching: false, 
+        info: false,
+        lengthChange: false,
+        paging: false,    
+        ordering: true,              
         "language": {
             "url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
         },   
 
-        ajax: '{{ route('datatable/getdata') }}',
+        ajax: '{{ route('utilisateurs/getdata') }}',
         columns: [
             {data: 'lastName', name: 'lastName'},
             {data: 'firstName', name: 'firstName'},           
             {data: 'email', name: 'email'},
             {data: 'zone', name: 'zone', orderable: false, searchable: false},
-            {data: 'statut', name: 'statut', orderable: false, searchable: false, width: "15%"},
-            {data: 'action', name: 'action', orderable: false, searchable: false,className: 'dt-body-center'},
+            {data: 'statut', name: 'statut', searchable: false, width: '15%', className:'text-center'},
+            {data: 'action', name: 'action', orderable: false, searchable: false,className:'text-center'},
+            
             
         ]
     });

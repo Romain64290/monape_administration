@@ -9,7 +9,7 @@
                 </div>
             </form> -->
 
-           
+      <!--     
     <form role="search" class="navbar-form-custom"action="search_results.html">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Recherche..." aria-label="Search">
@@ -20,7 +20,7 @@
         </div>
       </div>
     </form>
-
+-->
 
 
     </div>
@@ -71,7 +71,7 @@
           <button class="dropbtn"><img src="img/avatar.png" alt="" class="px-navbar-image"> Romain TALDU</button>
           
           <div class="dropdown-content">
-            <a href="#"><i class="dropdown-icon fa fa-user"></i>&nbsp;&nbsp;Mon profil</a>
+            <a href="{{ route('profil') }}"><i class="dropdown-icon fa fa-user"></i>&nbsp;&nbsp;Mon profil</a>
             <a href="#"><i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;Se déconnecter</a>
           </div>
         </div>
